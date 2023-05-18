@@ -1,6 +1,8 @@
 # Grumphp composer audit
 
-Execute composer audit with [GrumPHP](https://github.com/phpro/grumphp).
+Executes composer audit with [GrumPHP](https://github.com/phpro/grumphp).
+Since Composer 2.4 there is a new command called audit, that lists reported security vulnerabilities on current package versions.
+If the task encounters a vulnerable version, a warning is displayed.
 
 ## Installation
 
@@ -8,7 +10,7 @@ Install composer package
 
 ```bash
 composer require --dev madikon/grumphp-composer-audit
-  ```
+```
 
 Add the extension loader to your `grumphp.yml`
 
