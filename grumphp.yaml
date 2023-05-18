@@ -1,0 +1,15 @@
+grumphp:
+  environment:
+    paths:
+      - build/vendor/bin
+
+  extensions:
+    - Madikon\GrumphpComposerAudit\Extension\Loader
+
+  tasks:
+    phpcsfixer:
+      config: build/.php-cs-fixer.php
+    composer_audit: ~
+    phpstan:
+      configuration: build/phpstan.neon
+      use_grumphp_paths: false

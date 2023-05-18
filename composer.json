@@ -1,0 +1,28 @@
+{
+    "name": "madikon/grumphp-composer-audit",
+    "description": "A composer audit task for grumphp",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "phpro/grumphp": "^1"
+    },
+    "license": "GPL-3.0-or-later",
+    "autoload": {
+        "psr-4": {
+            "Madikon\\GrumphpComposerAudit\\": "src/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    },
+    "scripts": {
+        "ci:prepare": "composer install -d build",
+        "ci:grumphp": "vendor/bin/grumphp run",
+        "ci:test": [
+            "@ci:prepare",
+            "@ci:grumphp"
+        ]
+	}
+}
