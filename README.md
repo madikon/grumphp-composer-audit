@@ -1,3 +1,5 @@
+[![Test](https://github.com/madikon/grumphp-composer-audit/actions/workflows/Test.yml/badge.svg)](https://github.com/madikon/grumphp-composer-audit/actions/workflows/Test.yml)
+
 # Grumphp composer audit
 
 Executes composer audit with [GrumPHP](https://github.com/phpro/grumphp).
