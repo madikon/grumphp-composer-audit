@@ -28,5 +28,5 @@ jobs:
       - name: Run all tests
         uses: php-actions/composer@v6
         with:
-          command: run ci:test
+          command: run ci:grumphp
 

@@ -6,7 +6,11 @@
         "php": "^8.0",
         "phpro/grumphp": "^1"
     },
-    "license": "GPL-3.0-or-later",
+    "require-dev": {
+        "phpstan/phpstan": "^1",
+        "friendsofphp/php-cs-fixer": "^3.16"
+    },
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "Madikon\\GrumphpComposerAudit\\": "src/"
@@ -18,11 +22,6 @@
         }
     },
     "scripts": {
-        "ci:prepare": "composer install -d build",
-        "ci:grumphp": "vendor/bin/grumphp run",
-        "ci:test": [
-            "@ci:prepare",
-            "@ci:grumphp"
-        ]
+        "ci:grumphp": "vendor/bin/grumphp run"
 	}
 }
