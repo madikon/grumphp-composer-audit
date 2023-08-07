@@ -4,7 +4,7 @@
     "type": "library",
     "require": {
         "php": "^8.0",
-        "phpro/grumphp": "^1"
+        "phpro/grumphp": "^2"
     },
     "require-dev": {
         "phpstan/phpstan": "^1",

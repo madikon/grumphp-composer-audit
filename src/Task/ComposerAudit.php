@@ -8,9 +8,8 @@ use GrumPHP\Runner\TaskResult;
 use GrumPHP\Runner\TaskResultInterface;
 use GrumPHP\Task\AbstractExternalTask;
 use GrumPHP\Task\Context\ContextInterface;
-
-;
 use GrumPHP\Task\Context\RunContext;
+use GrumPHP\Task\Config\ConfigOptionsResolver;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 /**
@@ -27,9 +26,9 @@ class ComposerAudit extends AbstractExternalTask
     }
 
     /**
-     * @return OptionsResolver
+     * @return ConfigOptionsResolver
      */
-    public static function getConfigurableOptions(): OptionsResolver
+    public static function getConfigurableOptions(): ConfigOptionsResolver
     {
         $resolver = new OptionsResolver();
         $resolver->setDefaults(
@@ -41,7 +40,7 @@ class ComposerAudit extends AbstractExternalTask
         $resolver->addAllowedTypes('path', ['string']);
         $resolver->addAllowedTypes('format', ['null', 'string']);
 
-        return $resolver;
+        return ConfigOptionsResolver::fromOptionsResolver($resolver);
     }
 
     /**
